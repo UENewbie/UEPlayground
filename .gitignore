@@ -1,0 +1,47 @@
+# --- IDE / OS -------------------------------------------------
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- UE generated ---------------------------------------------
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Plugins: same rules inside plugins
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+Plugins/*/Saved/
+Plugins/*/DerivedDataCache/
+Plugins/*/Build/
+
+# Build outputs (whitelist some files)
+Build/
+!Build/*/
+Build/*/**
+!Build/*/PakBlacklist*.txt
+!Build/**/*.ico
+
+# Content side data
+Content/__ExternalActors__/
+Content/__ExternalObjects__/
+*_BuiltData.uasset
+
+# (Optional) user-specific editor settings → 보통 무시
+Config/DefaultEditorPerProjectUserSettings.ini
+
+# --- Generated project files (regenerable) --------------------
+*.xcodeproj
+*.xcworkspace
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# --- Source art (kept out of repo or 별도 저장소) -------------
+SourceArt/**/*.png
+SourceArt/**/*.tga
