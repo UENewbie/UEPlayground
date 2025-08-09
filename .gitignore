@@ -30,7 +30,7 @@ Content/__ExternalActors__/
 Content/__ExternalObjects__/
 *_BuiltData.uasset
 
-# (Optional) user-specific editor settings
+# user-specific editor settings
 Config/DefaultEditorPerProjectUserSettings.ini
 
 # --- Generated project files (regenerable) --------------------
@@ -42,7 +42,16 @@ Config/DefaultEditorPerProjectUserSettings.ini
 *.VC.db
 *.VC.opendb
 *.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.props
+*.targets
 
-# --- Source art (kept out of repo or 별도 저장소) -------------
+# ReSharper / Rider solution-level settings
+*.sln.DotSettings
+*.sln.DotSettings.user
+
+# --- Source art -------------
 SourceArt/**/*.png
 SourceArt/**/*.tga
