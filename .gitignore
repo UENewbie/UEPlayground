@@ -30,7 +30,7 @@ Content/__ExternalActors__/
 Content/__ExternalObjects__/
 *_BuiltData.uasset
 
-# (Optional) user-specific editor settings → 보통 무시
+# (Optional) user-specific editor settings
 Config/DefaultEditorPerProjectUserSettings.ini
 
 # --- Generated project files (regenerable) --------------------
@@ -41,6 +41,7 @@ Config/DefaultEditorPerProjectUserSettings.ini
 *.sdf
 *.VC.db
 *.VC.opendb
+*.sln
 
 # --- Source art (kept out of repo or 별도 저장소) -------------
 SourceArt/**/*.png
