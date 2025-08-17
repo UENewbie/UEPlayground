@@ -8,6 +8,8 @@
 #include "Interactor.generated.h"
 
 
+class UInteractable;
+
 UCLASS(ClassGroup=(Custom), BlueprintType, Blueprintable, meta=(BlueprintSpawnableComponent))
 class INTERACTIONRUNTIME_API UInteractor : public UActorComponent
 {
@@ -18,11 +20,10 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
-
 public:
-	UFUNCTION()
+	UFUNCTION(Server, Reliable)
 	void ConnectObject();
-	UFUNCTION()
+	UFUNCTION(Server, Reliable)
 	void DisconnectObject();
 	UFUNCTION(BlueprintCallable)
 	bool TryInteraction();

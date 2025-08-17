@@ -6,6 +6,8 @@
 #include "Interactable.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Net/UnrealNetwork.h"
 
 
 UInteractor::UInteractor()
@@ -37,7 +39,7 @@ void UInteractor::BeginPlay()
 	
 }
 
-void UInteractor::ConnectObject()
+void UInteractor::ConnectObject_Implementation()
 {
 	if (nullptr != InteractableInSight)
 	{
@@ -46,7 +48,7 @@ void UInteractor::ConnectObject()
 	}
 }
 
-void UInteractor::DisconnectObject()
+void UInteractor::DisconnectObject_Implementation()
 {
 	if (nullptr != InteractableInSight)
 	{
@@ -57,9 +59,13 @@ void UInteractor::DisconnectObject()
 
 bool UInteractor::TryInteraction()
 {
-	if (nullptr != InteractableInSight)
+	if (UKismetSystemLibrary::IsServer(this))
 	{
-		InteractableInSight->OnInteractionRequest();
+		if (nullptr != InteractableInSight)
+		{
+			InteractableInSight->OnInteractionRequest();
+		}
+		return true;
 	}
 	return false;
 }

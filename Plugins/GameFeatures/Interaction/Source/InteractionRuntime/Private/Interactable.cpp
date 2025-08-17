@@ -3,6 +3,8 @@
 
 #include "Interactable.h"
 
+#include "Net/UnrealNetwork.h"
+
 
 UInteractable::UInteractable()
 {
@@ -13,13 +15,14 @@ UInteractable::UInteractable()
 	InteractionType = EInteractionType::None;
 	InteractionState = EInteractionState::None;
 	InteractableCount = 3;
+
+	SetIsReplicated(true);
 }
 
 
 void UInteractable::BeginPlay()
 {
 	Super::BeginPlay();
-
 	
 }
 
@@ -47,7 +50,7 @@ void UInteractable::OnInteractionRequest()
 	}
 }
 
-void UInteractable::Interaction()
+void UInteractable::Interaction_Implementation()
 {
 	OnInteraction.Broadcast();
 
