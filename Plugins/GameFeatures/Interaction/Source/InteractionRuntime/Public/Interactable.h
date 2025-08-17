@@ -28,6 +28,7 @@ public:
 	UFUNCTION()
 	void OnInteractionRequest();
 
+	UFUNCTION(Server, Reliable)
 	void Interaction();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")

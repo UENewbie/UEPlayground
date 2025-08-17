@@ -51,11 +51,11 @@
 			"Enabled": true
 		},
 		{
-			"Name": "Interaction",
+			"Name": "Playgroundinterface",
 			"Enabled": true
 		},
 		{
-			"Name": "Playgroundinterface",
+			"Name": "PlaygroundCore",
 			"Enabled": true
 		}
 	]
