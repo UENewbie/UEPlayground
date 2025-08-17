@@ -16,7 +16,7 @@ UInteractable::UInteractable()
 	InteractionState = EInteractionState::None;
 	InteractableCount = 3;
 
-	SetIsReplicated(true);
+	SetIsReplicatedByDefault(true);
 }
 
 

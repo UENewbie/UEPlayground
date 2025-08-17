@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class PlaygroundCore : ModuleRules
+public class CombatRuntime : ModuleRules
 {
-	public PlaygroundCore(ReadOnlyTargetRules Target) : base(Target)
+	public CombatRuntime(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
@@ -38,9 +38,6 @@ public class PlaygroundCore : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"InputCore",
-				"EnhancedInput",
-				"ModularGameplay",
 				"GameplayTags",
 				"GameplayTasks"
 				// ... add private dependencies that you statically link with here ...	
